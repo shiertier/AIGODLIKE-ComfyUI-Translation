@@ -24,7 +24,7 @@ export class TUtils {
   }
 
   static syncTranslation(OnFinished = () => {}) {
-    var locale = localStorage.getItem(TUtils.LOCALE_ID) || "en-US";
+    var locale = localStorage.getItem(TUtils.LOCALE_ID) || "zh-CN";
     if (localStorage.getItem(TUtils.LOCALE_ID) === null) {
       // 有可能菜单设置了zh-CN但 loacalStorage为空, 这时不会刷新
       let slocal = localStorage.getItem(`Comfy.Settings.${TUtils.LOCALE_ID}`);
