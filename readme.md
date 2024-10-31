@@ -1,5 +1,10 @@
 # AIGODLIKE-ComfyUI-Translation
 A plugin for multilingual translation of [ComfyUI](https://github.com/comfyanonymous/ComfyUI)，This plugin implements translation of resident menu bar/search bar/right-click context menu/node, etc
+
+2024/09/06 Support the latest ComfyUI interface
+
+https://github.com/user-attachments/assets/9418fba8-f499-4414-9c7f-4d548ff77c49
+
 ## ComfyUI users in other languages, I need your help
 I hope ComfyUI can support more languages besides Chinese and English, such as French, German, Japanese, Korean, etc. However, I believe that translation should be done by native speakers of each language. So I need your help, let's go fight for ComfyUI together!
 
@@ -10,11 +15,11 @@ I hope ComfyUI can support more languages besides Chinese and English, such as F
 
 ## Language supported
 
-|COMFYUI Translation|zh-CN简体中文|zh-TW繁體中文|English|Japanese日本語|Korean한국어|Your language|
-|:----|:----|:----|:----|:----|:----|:----|
-|Menu|√|√|√|√|√|TODO|
-|NodeCategory|√|√|√|√|TODO|TODO|
-|Nodes|√|√|√|√|TODO|TODO|
+|COMFYUI Translation|简体中文|繁體中文|English|日本語|한국어|Русский|Your language|
+|:----|:----|:----|:----|:----|:----|:----|:----|
+|Menu|√|√|√|√|√|√|TODO|
+|NodeCategory|√|√|√|√|√|√|TODO|
+|Nodes|√|√|√|√|√|√|TODO|
 ## Function
 1. Translate all UI of ComfyUI
 ![image](https://github.com/AIGODLIKE/AIGODLIKE-COMFYUI-TRANSLATION/assets/116185401/323f3f84-e9c0-421e-9089-470e5a5ac350)
@@ -27,54 +32,147 @@ https://github.com/AIGODLIKE/AIGODLIKE-COMFYUI-TRANSLATION/assets/116185401/e431
 5. **(2023/8/16)** Support one-click switching between English/currently set language
 6. **(2023/8/19)** Support for multilingual translation of custom nodes * (in production)
 
-|Custom Node Name|zh-CN|zh-TW|English|Japanese|Korean|
-|:----|:----|:----|:----|:----|:----|
-|[Advanced Encode](https://github.com/BlenderNeko/ComfyUI_ADV_CLIP_emb)|√|√|√|TODO|
-|[Advanced ControlNet](https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet)|√|√|√|TODO|TODO|
-|[AGL-ComfyUI-Translation](https://github.com/AIGODLIKE/AIGODLIKE-COMFYUI-TRANSLATION)|√|√|√|√|TODO|
-|[AlekPet Nodes](https://github.com/AlekPet/ComfyUI_Custom_Nodes_AlekPet)|√|√|√|√|TODO|
-|[AnimateDiff](https://github.com/ArtVentureX/comfyui-animatediff)|√|√|√|√|TODO|
-|[AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved.git)|√|√|√|TODO|TODO|
-|[CLIP Seg](https://github.com/biegert/ComfyUI-CLIPSeg)|√|√|√|√|TODO|
-|[ComfyRoll](https://github.com/RockOfFire/ComfyUI_Comfyroll_CustomNodes)|√|√|√|TODO|TODO|
-|[ControlNet LLLite](https://github.com/kohya-ss/ControlNet-LLLite-ComfyUI)|√|√|√|TODO|TODO|
-|[ControlNet Preprocessors](https://github.com/Fannovel16/comfy_controlnet_preprocessors)|√|√|√|√|TODO|
-|[ControlNet Preprocessors AUX](https://github.com/Fannovel16/comfyui_controlnet_aux)|√|√|√|√|TODO|
-|[Cutoff](https://github.com/BlenderNeko/ComfyUI_Cutoff)|√|√|√|√|TODO|
-|[Custom-Scripts](https://github.com/pythongosssss/ComfyUI-Custom-Scripts)|√|√|√|TODO|TODO|
-|[Davemane42 Nodes](https://github.com/Davemane42/ComfyUI_Dave_CustomNode)|√|√|√|√|TODO|
-|[Dagthomas Nodes](https://github.com/dagthomas/comfyui_dagthomas)|√|√|√|√|TODO|
-|[Dynamic Thresholding](https://github.com/mcmonkeyprojects/sd-dynamic-thresholding)|√|√|√|TODO|TODO|
-|[Efficiency Nodes](https://github.com/LucianoCirino/efficiency-nodes-comfyui)|√|√|√|√|TODO|
-|[EllangoK Postprocessing](https://github.com/EllangoK/ComfyUI-post-processing-nodes)|√|√|√|TODO|TODO|
-|[ExLlama nodes](https://github.com/Zuellni/ComfyUI-ExLlama-Nodes)|√|√|√|TODO|TODO|
-|[experiments](https://github.com/comfyanonymous/ComfyUI_experiments)|√|√|√|TODO|TODO|
-|[Fast Decode](https://github.com/nagolinc/ComfyUI_FastVAEDecorder_SDXL)|√|√|√|√|TODO|
-|[IPAdapter](https://github.com/laksjdjf/IPAdapter-ComfyUI)|√|√|√|TODO|TODO|
-|[IPAdapter_plus](https://github.com/cubiq/ComfyUI_IPAdapter_plus)|√|√|√|TODO|TODO|
-|[Image Grid](https://github.com/LEv145/images-grid-comfy-plugin)|√|√|√|TODO|TODO|
-|[Impact Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack)|√|√|√|TODO|TODO|
-|[Impact Subpack](https://github.com/ltdrdata/ComfyUI-Impact-Subpack)|√|√|√|TODO|TODO|
-|[Inspire Pack](https://github.com/ltdrdata/ComfyUI-Inspire-Pack)|√|√|√|TODO|TODO|
-|[LaMa Preprocessor](https://github.com/mlinmg/ComfyUI-LaMA-Preprocessor)|√|TODO|√|TODO|TODO|
-|[Latent2RGB](https://github.com/bvhari/ComfyUI_LatentToRGB)|√|√|√|√|TODO|
-|[LCM](https://github.com/0xbitches/ComfyUI-LCM)|√|TODO|√|TODO|TODO|
-|[Manager](https://github.com/ltdrdata/ComfyUI-Manager)|√|√|√|TODO|TODO|
-|[Masquerade Nodes](https://github.com/BadCafeCode/masquerade-nodes-comfyui)|√|√|√|TODO|TODO|
-|[Mixlab Nodes](https://github.com/shadowcz007/comfyui-mixlab-nodes.git)|√|TODO|√|TODO|TODO|
-|[Noise](https://github.com/BlenderNeko/ComfyUI_Noise)|√|√|√|TODO|TODO|
-|[QR](https://github.com/coreyryanhanson/comfy-qr)|√|√|√|TODO|TODO|
-|[ReActor](https://github.com/Gourieff/comfyui-reactor-node)|√|TODO|√|TODO|TODO|
-|[Restart-Sampling](https://github.com/ssitu/ComfyUI_restart_sampling)|√|√|√|TODO|TODO|
-|[Roop](https://github.com/Navezjt/ComfyUI_roop.git)|√|TODO|√|TODO|TODO|TODO|
-|[SDXL_prompt_styler](https://github.com/twri/sdxl_prompt_styler)|√|√|√|TODO|TODO|
-|[SeargeSDXL](https://github.com/SeargeDP/SeargeSDXL)|√|√|√|TODO|TODO|
-|[StabilityNodes](https://github.com/Stability-AI/stability-ComfyUI-nodes)|√|√|√|TODO|TODO|
-|[TiledKSampler](https://github.com/BlenderNeko/ComfyUI_TiledKSampler)|√|√|√|√|TODO|
-|[UltimateSDUpscale](https://github.com/ssitu/ComfyUI_UltimateSDUpscale)|√|√|√|TODO|TODO|
-|[Vextra Nodes](https://github.com/diontimmer/ComfyUI-Vextra-Nodes)|√|√|√|TODO|TODO|
-|[WAS Suite](https://github.com/WASasquatch/was-node-suite-comfyui)|√|√|√|TODO|TODO|
-|[WD14-Tagger](https://github.com/pythongosssss/ComfyUI-WD14-Tagger)|√|√|√|TODO|TODO|
+|Custom Node Name|简中|繁中|English|日本語|한국어|Русский|
+|:----|:----|:----|:----|:----|:----|:----|
+|[3D-MeshTool](https://github.com/807502278/ComfyUI-3D-MeshTool.git)|√|TODO|√|TODO|TODO|TODO|
+|[3D-Pack](https://github.com/MrForExample/ComfyUI-3D-Pack)|√|TODO|√|TODO|TODO|TODO|
+|[Advanced Encode](https://github.com/BlenderNeko/ComfyUI_ADV_CLIP_emb)|√|√|√|TODO|TODO|TODO|
+|[Advanced ControlNet](https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet)|√|√|√|TODO|TODO|TODO|
+|[AGL-ComfyUI-Translation](https://github.com/AIGODLIKE/AIGODLIKE-COMFYUI-TRANSLATION)|√|√|√|√|TODO|TODO|
+|[AlekPet Nodes](https://github.com/AlekPet/ComfyUI_Custom_Nodes_AlekPet)|√|√|√|√|TODO|TODO|
+|[AnimateAnyone](https://github.com/MrForExample/ComfyUI-AnimateAnyone-Evolved.git)|√|TODO|√|TODO|TODO|TODO|
+|[AnimateDiff](https://github.com/ArtVentureX/comfyui-animatediff)|√|√|√|√|TODO|TODO|
+|[AnimateDiff-Evolved](https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved.git)|√|√|√|TODO|TODO|TODO|
+|[AnyLine](https://github.com/TheMistoAI/ComfyUI-Anyline.git)|√|TODO|√|TODO|TODO|TODO|
+|[AnyText](https://github.com/zmwv823/ComfyUI-AnyText.git)|√|TODO|√|TODO|TODO|TODO|
+|[Automatic CFG](https://github.com/Extraltodeus/ComfyUI-AutomaticCFG.git)|√|TODO|√|TODO|TODO|TODO|
+|[BiRefNet](https://github.com/viperyl/ComfyUI-BiRefNet.git)|√|TODO|√|TODO|TODO|TODO|
+|[BiRefNet Hugo](https://github.com/MoonHugo/ComfyUI-BiRefNet-Hugo.git)|√|TODO|√|TODO|TODO|TODO|
+|[BitsandBytes NF4](https://github.com/comfyanonymous/ComfyUI_bitsandbytes_NF4.git)|√|TODO|√|TODO|TODO|TODO|
+|[BrushNet (kijai)](https://github.com/kijai/ComfyUI-BrushNet-Wrapper.git)|√|TODO|√|TODO|TODO|TODO|
+|[BrushNet (nullquant)](https://github.com/nullquant/ComfyUI-BrushNet.git)|√|TODO|√|TODO|TODO|TODO|
+|[Bxb](https://github.com/zhulu111/ComfyUI_Bxb.git)|√|TODO|√|TODO|TODO|TODO|
+|[CCSR](https://github.com/kijai/ComfyUI-CCSR.git)|√|TODO|√|TODO|TODO|TODO|
+|[Champ](https://github.com/chaojie/ComfyUI-Champ.git)|√|TODO|√|TODO|TODO|TODO|
+|[CLIP Seg](https://github.com/biegert/ComfyUI-CLIPSeg)|√|√|√|√|TODO|TODO|
+|[CogVideo](https://github.com/kijai/ComfyUI-CogVideoXWrapper.git)|√|TODO|√|TODO|TODO|TODO|
+|[ComfyRoll](https://github.com/RockOfFire/ComfyUI_Comfyroll_CustomNodes)|√|√|√|TODO|TODO|TODO|
+|[ControlNet LLLite](https://github.com/kohya-ss/ControlNet-LLLite-ComfyUI)|√|√|√|TODO|TODO|TODO|
+|[ControlNet Preprocessors](https://github.com/Fannovel16/comfy_controlnet_preprocessors)|√|√|√|√|TODO|TODO|
+|[ControlNet Preprocessors AUX](https://github.com/Fannovel16/comfyui_controlnet_aux)|√|√|√|√|TODO|TODO|
+|[ControlNeXt SVD](https://github.com/kijai/ComfyUI-ControlNeXt-SVD.git)|√|TODO|√|TODO|TODO|TODO|
+|[Crystools](https://github.com/crystian/ComfyUI-Crystools.git)|√|TODO|√|TODO|TODO|√|
+|[Cutoff](https://github.com/BlenderNeko/ComfyUI_Cutoff)|√|√|√|√|TODO|TODO|
+|[Custom-Scripts](https://github.com/pythongosssss/ComfyUI-Custom-Scripts)|√|√|√|TODO|TODO|TODO|
+|[cg-use-everywhere](https://github.com/chrisgoringe/cg-use-everywhere.git)|√|TODO|√|TODO|TODO|TODO|
+|[cg-image-picker](https://github.com/chrisgoringe/cg-image-picker.git)|√|TODO|√|TODO|TODO|TODO|
+|[Davemane42 Nodes](https://github.com/Davemane42/ComfyUI_Dave_CustomNode)|√|√|√|√|TODO|TODO|
+|[Dagthomas Nodes](https://github.com/dagthomas/comfyui_dagthomas)|√|√|√|√|TODO|TODO|
+|[Derfuu Nodes](https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git)|√|TODO|√|TODO|TODO|TODO|
+|[DynamiCrafter (kijai)](https://github.com/kijai/ComfyUI-DynamiCrafterWrapper.git)|√|TODO|√|TODO|TODO|TODO|
+|[DynamiCrafter (ExponentialML)](https://github.com/ExponentialML/ComfyUI_Native_DynamiCrafter.git)|√|TODO|√|TODO|TODO|TODO|
+|[DynamicThresholding](https://github.com/mcmonkeyprojects/sd-dynamic-thresholding)|√|√|√|TODO|TODO|TODO|
+|[EasyAnimate (chaojie)](https://github.com/chaojie/ComfyUI-EasyAnimate.git)|√|TODO|√|TODO|TODO|TODO|
+|[EasyAnimate (kijai)](https://github.com/kijai/ComfyUI-EasyAnimateWrapper.git)|√|TODO|√|TODO|TODO|TODO|
+|[Easy Tools](https://github.com/jafshare/ComfyUI-Easy-Tools)|√|TODO|√|TODO|TODO|TODO|
+|[Easy Use](https://github.com/yolain/ComfyUI-Easy-Use)|√|TODO|√|TODO|TODO|TODO|
+|[Eesahes Nodes](https://github.com/EeroHeikkinen/ComfyUI-eesahesNodes.git)|√|TODO|√|TODO|TODO|TODO|
+|[Efficiency Nodes](https://github.com/LucianoCirino/efficiency-nodes-comfyui)|√|√|√|√|TODO|TODO|
+|[ELLA (ExponentialML)](https://github.com/ExponentialML/ComfyUI_ELLA.git)|√|TODO|√|TODO|TODO|TODO|
+|[ELLA (Tencent)](https://github.com/TencentQQGYLab/ComfyUI-ELLA.git)|√|TODO|√|TODO|TODO|TODO|
+|[EllangoK Postprocessing](https://github.com/EllangoK/ComfyUI-post-processing-nodes)|√|√|√|TODO|TODO|TODO|
+|[Essentials](https://github.com/cubiq/ComfyUI_essentials.git)|√|TODO|√|TODO|TODO|TODO|
+|[Execution-Inversion](https://github.com/BadCafeCode/execution-inversion-demo-comfyui.git)|√|TODO|√|TODO|TODO|TODO|
+|[ExLlama nodes](https://github.com/Zuellni/ComfyUI-ExLlama-Nodes)|√|√|√|TODO|TODO|TODO|
+|[experiments](https://github.com/comfyanonymous/ComfyUI_experiments)|√|√|√|TODO|TODO|TODO|
+|[Face Analysis](https://github.com/cubiq/ComfyUI_FaceAnalysis.git)|√|TODO|√|TODO|TODO|TODO|
+|[Fast Decode](https://github.com/nagolinc/ComfyUI_FastVAEDecorder_SDXL)|√|√|√|√|TODO|TODO|
+|[Florence2](https://github.com/kijai/ComfyUI-Florence2.git)|√|TODO|√|TODO|TODO|TODO|
+|[Flowty CRM](https://github.com/flowtyone/ComfyUI-Flowty-CRM.git)|√|TODO|√|TODO|TODO|TODO|
+|[Flowty TripoSR](https://github.com/flowtyone/ComfyUI-Flowty-TripoSR.git)|√|TODO|√|TODO|TODO|TODO|
+|[Frame Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation.git)|√|TODO|√|TODO|TODO|TODO|
+|[FreeU Advanced](https://github.com/WASasquatch/FreeU_Advanced)|√|TODO|√|TODO|TODO|TODO|
+|[IC-Light (kijai)](https://github.com/kijai/ComfyUI-IC-Light.git)|√|TODO|√|TODO|TODO|TODO|
+|[IC-Light-Wrapper (kijai)](https://github.com/kijai/ComfyUI-IC-Light-Wrapper.git)|√|TODO|√|TODO|TODO|TODO|
+|[IF AI tools](https://github.com/if-ai/ComfyUI-IF_AI_tools.git)|√|TODO|√|TODO|TODO|TODO|
+|[Image Resize](https://github.com/palant/image-resize-comfyui.git)|√|TODO|√|TODO|TODO|TODO|
+|[Instant Mesh](https://github.com/jtydhr88/ComfyUI-InstantMesh.git)|√|TODO|√|TODO|TODO|TODO|
+|[IPAdapter](https://github.com/laksjdjf/IPAdapter-ComfyUI)|√|√|√|TODO|TODO|TODO|
+|[IPAdapter_plus](https://github.com/cubiq/ComfyUI_IPAdapter_plus)|√|√|√|TODO|TODO|TODO|
+|[Image Grid](https://github.com/LEv145/images-grid-comfy-plugin)|√|√|√|TODO|TODO|TODO|
+|[Impact Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack)|√|√|√|TODO|TODO|TODO|
+|[Impact Subpack](https://github.com/ltdrdata/ComfyUI-Impact-Subpack)|√|√|√|TODO|TODO|TODO|
+|[Inpaint CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch.git)|√|TODO|√|TODO|TODO|TODO|
+|[Inpaint Nodes](https://github.com/Acly/comfyui-inpaint-nodes.git)|√|TODO|√|TODO|TODO|TODO|
+|[Inspire Pack](https://github.com/ltdrdata/ComfyUI-Inspire-Pack)|√|√|√|TODO|TODO|TODO|
+|[InstantID (cubiq)](https://github.com/cubiq/ComfyUI_InstantID.git)|√|TODO|√|TODO|TODO|TODO|
+|[InstantID (ZHO)](https://github.com/ZHO-ZHO-ZHO/ComfyUI-InstantID.git)|√|TODO|√|TODO|TODO|TODO|
+|[Joy Caption](https://github.com/StartHua/Comfyui_CXH_joy_caption.git)|√|TODO|√|TODO|TODO|TODO|
+|[KJ Nodes](https://github.com/kijai/ComfyUI-KJNodes.git)|√|TODO|√|TODO|TODO|TODO|
+|[kkTranslator](https://github.com/AIGCTeam/ComfyUI_kkTranslator_nodes.git)|√|TODO|√|TODO|TODO|TODO|
+|[Kolors (kijai)](https://github.com/kijai/ComfyUI-KwaiKolorsWrapper.git)|√|TODO|√|TODO|TODO|TODO|
+|[Kolors (MinusZone)](https://github.com/MinusZoneAI/ComfyUI-Kolors-MZ.git)|√|TODO|√|TODO|TODO|TODO|
+|[LaMa Preprocessor](https://github.com/mlinmg/ComfyUI-LaMA-Preprocessor)|√|TODO|√|TODO|TODO|TODO|
+|[Latent2RGB](https://github.com/bvhari/ComfyUI_LatentToRGB)|√|√|√|√|TODO|TODO|
+|[LayerDiffuse](https://github.com/huchenlei/ComfyUI-layerdiffuse)|√|TODO|√|TODO|TODO|TODO|
+|[LayerStyle](https://github.com/chflame163/ComfyUI_LayerStyle)|√|TODO|√|TODO|TODO|TODO|
+|[LCM](https://github.com/0xbitches/ComfyUI-LCM)|√|TODO|√|TODO|TODO|TODO|
+|[Literals](https://github.com/M1kep/ComfyLiterals.git)|√|TODO|√|TODO|TODO|TODO|
+|[LivePortrait(KJ)](https://github.com/kijai/ComfyUI-LivePortraitKJ.git)|√|TODO|√|TODO|TODO|TODO|
+|[LivePortrait-Advanced](https://github.com/PowerHouseMan/ComfyUI-AdvancedLivePortrait.git)|√|TODO|√|TODO|TODO|TODO|
+|[LoadLoraWithTags](https://github.com/Extraltodeus/LoadLoraWithTags.git)|√|TODO|√|TODO|TODO|TODO|
+|[Logic](https://github.com/theUpsider/ComfyUI-Logic.git)|√|TODO|√|TODO|TODO|TODO|
+|[LoraAutoTrigger](https://github.com/idrirap/ComfyUI-Lora-Auto-Trigger-Words.git)|√|TODO|√|TODO|TODO|TODO|
+|[MagicClothing](https://github.com/frankchieng/ComfyUI_MagicClothing.git)|√|TODO|√|TODO|TODO|TODO|
+|[Manager](https://github.com/ltdrdata/ComfyUI-Manager)|√|√|√|TODO|TODO|√|
+|[Marigold](https://github.com/kijai/ComfyUI-Marigold.git)|√|TODO|√|TODO|TODO|TODO|
+|[Masquerade Nodes](https://github.com/BadCafeCode/masquerade-nodes-comfyui)|√|√|√|TODO|TODO|TODO|
+|[Math](https://github.com/evanspearman/ComfyMath.git)|√|TODO|√|TODO|TODO|TODO|
+|[Mixlab Nodes](https://github.com/shadowcz007/comfyui-mixlab-nodes.git)|√|TODO|√|TODO|TODO|TODO|
+|[MoonDream](https://github.com/kijai/ComfyUI-moondream.git)|√|TODO|√|TODO|TODO|TODO|
+|[MotionCtrl](https://github.com/chaojie/ComfyUI-MotionCtrl)|√|TODO|√|TODO|TODO|TODO|
+|[MotionCtrl-SVD](https://github.com/chaojie/ComfyUI-MotionCtrl-SVD)|√|TODO|√|TODO|TODO|TODO|
+|[MTB](https://github.com/melMass/comfy_mtb.git)|√|TODO|√|TODO|TODO|TODO|
+|[N-Sidebar](https://github.com/Nuked88/ComfyUI-N-Sidebar.git)|√|TODO|√|TODO|TODO|TODO|
+|[Noise](https://github.com/BlenderNeko/ComfyUI_Noise)|√|√|√|TODO|TODO|TODO|
+|[NormalLighting](https://github.com/TJ16th/comfyUI_TJ_NormalLighting.git)|√|TODO|√|TODO|TODO|TODO|
+|[Paint By Example](https://github.com/Kangkang625/ComfyUI-paint-by-example.git)|√|TODO|√|TODO|TODO|TODO|
+|[Perturbed-Attention](https://github.com/pamparamm/sd-perturbed-attention.git)|√|TODO|√|TODO|TODO|TODO|
+|[Portrai Master](https://github.com/florestefano1975/comfyui-portrait-master.git)|√|TODO|√|TODO|TODO|TODO|
+|[Power Noise Suite](https://github.com/WASasquatch/PowerNoiseSuite)|√|TODO|√|TODO|TODO|TODO|
+|[Prompt Composer](https://github.com/florestefano1975/comfyui-prompt-composer.git)|√|TODO|√|TODO|TODO|TODO|
+|[Prompt MZ](https://github.com/MinusZoneAI/ComfyUI-Prompt-MZ.git)|√|TODO|√|TODO|TODO|TODO|
+|[Prompt Reader](https://github.com/receyuki/comfyui-prompt-reader-node)|√|TODO|√|TODO|TODO|TODO|
+|[PuLID (cubiq)](https://github.com/cubiq/PuLID_ComfyUI.git)|√|TODO|√|TODO|TODO|TODO|
+|[QR](https://github.com/coreyryanhanson/comfy-qr)|√|√|√|TODO|TODO|TODO|
+|[Quick Connections](https://github.com/niknah/quick-connections.git)|√|TODO|√|TODO|TODO|TODO|
+|[Omost](https://github.com/huchenlei/ComfyUI_omost.git)|√|TODO|√|TODO|TODO|TODO|
+|[OneButtonPrompt](https://github.com/AIrjen/OneButtonPrompt)|√|TODO|√|TODO|TODO|TODO|
+|[ReActor](https://github.com/Gourieff/comfyui-reactor-node)|√|TODO|√|TODO|TODO|TODO|
+|[ResAdapter](https://github.com/jiaxiangc/ComfyUI-ResAdapter.git)|√|TODO|√|TODO|TODO|TODO|
+|[Restart-Sampling](https://github.com/ssitu/ComfyUI_restart_sampling)|√|√|√|TODO|TODO|TODO|
+|[Roop](https://github.com/Navezjt/ComfyUI_roop.git)|√|TODO|√|TODO|TODO|TODO|TODO|
+|[rgthree](https://github.com/rgthree/rgthree-comfy.git)|√|TODO|√|TODO|TODO|TODO|
+|[SD-Latent-Interposer](https://github.com/city96/SD-Latent-Interposer)|√|TODO|√|TODO|TODO|TODO|
+|[SDXL_prompt_styler](https://github.com/twri/sdxl_prompt_styler)|√|√|√|TODO|TODO|TODO|
+|[SeargeSDXL](https://github.com/SeargeDP/SeargeSDXL)|√|√|√|TODO|TODO|TODO|
+|[Segment Anything](https://github.com/storyicon/comfyui_segment_anything.git)|√|TODO|√|TODO|TODO|TODO|
+|[Segment Anything 2](https://github.com/kijai/ComfyUI-segment-anything-2.git)|√|TODO|√|TODO|TODO|TODO|
+|[StabilityNodes](https://github.com/Stability-AI/stability-ComfyUI-nodes)|√|√|√|TODO|TODO|TODO|
+|[SUPIR](https://github.com/kijai/ComfyUI-SUPIR.git)|√|TODO|√|TODO|TODO|TODO|
+|[TiledDiffusion](https://github.com/shiimizu/ComfyUI-TiledDiffusion)|√|TODO|√|TODO|TODO|TODO|
+|[TiledKSampler](https://github.com/BlenderNeko/ComfyUI_TiledKSampler)|√|√|√|√|TODO|TODO|
+|[TinyTerra](https://github.com/TinyTerra/ComfyUI_tinyterraNodes.git)|√|TODO|√|TODO|TODO|TODO|TODO|
+|[ToonCrafter](https://github.com/AIGODLIKE/ComfyUI-ToonCrafter.git)|√|TODO|√|TODO|TODO|TODO|TODO|
+|[TripoAPI](https://github.com/VAST-AI-Research/ComfyUI-Tripo.git)|√|TODO|√|TODO|TODO|TODO|
+|[UltimateSDUpscale](https://github.com/ssitu/ComfyUI_UltimateSDUpscale)|√|√|√|TODO|TODO|TODO|
+|[Vextra Nodes](https://github.com/diontimmer/ComfyUI-Vextra-Nodes)|√|√|√|TODO|TODO|TODO|
+|[Video Matting](https://github.com/Fannovel16/ComfyUI-Video-Matting.git)|√|TODO|√|TODO|TODO|TODO|
+|[Visual Style Prompting](https://github.com/ExponentialML/ComfyUI_VisualStylePrompting.git)|√|TODO|√|TODO|TODO|TODO|
+|[VLM Nodes](https://github.com/gokayfem/ComfyUI_VLM_nodes.git)|√|TODO|√|TODO|TODO|TODO|
+|[WAS Suite](https://github.com/WASasquatch/was-node-suite-comfyui)|√|√|√|TODO|TODO|TODO|
+|[WD14-Tagger](https://github.com/pythongosssss/ComfyUI-WD14-Tagger)|√|√|√|TODO|TODO|TODO|
+|[zfkun](https://github.com/zfkun/ComfyUI_zfkun.git)|√|TODO|√|TODO|TODO|TODO|
 
 The above only includes translations for the UI. If you are a developer and need me to help you translate your interface, you can go directly to the [ComfyUI Plugins List](https://github.com/WASasquatch/comfyui-plugins) to add your custom node project, or send an issue, as long as I can see it, I will translate it (it will take some time)
 
@@ -87,7 +185,11 @@ git clone https://github.com/AIGODLIKE/AIGODLIKE-COMFYUI-TRANSLATION.git
 ```
 ![image](https://github.com/AIGODLIKE/AIGODLIKE-COMFYUI-TRANSLATION/assets/116185401/44de967d-2611-4f07-a795-9b28169d51f5)
 ## How to use
-Launch ComfyUI and open the menu. Click on the language option to switch languages.
+For new UI:
+![1481d583968e3b626e366d2ad2faf62c](https://github.com/user-attachments/assets/9fcfcca7-7666-419d-adfa-2a2eccbd921e)
+
+
+For legacy UI:
 ![image](https://github.com/AIGODLIKE/AIGODLIKE-COMFYUI-TRANSLATION/assets/116185401/74d184ac-e7ef-4059-bd5e-dfb6fd4a64ac)
 
 ## How to add other languages（translator）

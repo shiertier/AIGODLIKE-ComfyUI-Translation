@@ -25,7 +25,7 @@ CUR_PATH = Path(__file__).parent
 
 
 def try_get_json(path: Path):
-    for coding in {"utf-8", "gbk"}:
+    for coding in ["utf-8", "gbk"]:
         try:
             return json.loads(path.read_text(encoding=coding))
         except Exception:
@@ -46,21 +46,27 @@ def get_nodes_translation(locale):
 
 
 def get_category_translation(locale):
+    cats = {}
+    for cat_json in CUR_PATH.joinpath(locale, "Categories").glob("*.json"):
+        cats.update(try_get_json(cat_json))
     path = CUR_PATH.joinpath(locale, "NodeCategory.json")
     if not path.exists():
         path = CUR_PATH.joinpath("en_US", "NodeCategory.json")
-    if not path.exists():
-        return {}
-    return try_get_json(path)
+    if path.exists():
+        cats.update(try_get_json(path))
+    return cats
 
 
 def get_menu_translation(locale):
+    menus = {}
+    for menu_json in CUR_PATH.joinpath(locale, "Menus").glob("*.json"):
+        menus.update(try_get_json(menu_json))
     path = CUR_PATH.joinpath(locale, "Menu.json")
     if not path.exists():
         path = CUR_PATH.joinpath("en_US", "Menu.json")
-    if not path.exists():
-        return {}
-    return try_get_json(path)
+    if path.exists():
+        menus.update(try_get_json(path))
+    return menus
 
 
 @lru_cache
@@ -84,25 +90,41 @@ def compile_translation(locale):
     return json_data
 
 
+@lru_cache
+def compress_json(data, method="gzip"):
+    if method == "gzip":
+        import gzip
+        return gzip.compress(data.encode("utf-8"))
+    else:
+        return data
+
+
 @server.PromptServer.instance.routes.post("/agl/get_translation")
-async def get_translation(request):
+async def get_translation(request: web.Request):
     post = await request.post()
     locale = post.get("locale", "en_US")
+    accept_encoding = request.headers.get("Accept-Encoding", "")
     json_data = "{}"
+    headers = {}
     try:
         json_data = compile_translation(locale)
+        if "gzip" in accept_encoding:
+            json_data = compress_json(json_data, method="gzip")
+            headers["Content-Encoding"] = "gzip"
+            # 指定 charset 为 utf-8
+            # headers["Content-Type"] = "application/json; charset=utf-8"
     except Exception as e:
         sys.stderr.write(f"[agl/get_translation error]: {e}\n")
         sys.stderr.flush()
-    return web.Response(status=200, body=json_data)
+    return web.Response(status=200, body=json_data, headers=headers)
 
 
 def rmtree(path: Path):
     # unlink symbolic link
+    if not path.exists():
+        return
     if Path(path.resolve()).as_posix() != path.as_posix():
         path.unlink()
-        return
-    if not path.exists():
         return
     if path.is_file():
         path.unlink()
@@ -124,39 +146,25 @@ def rmtree(path: Path):
 
 
 def register():
+    import nodes
     aigodlike_ext_path = COMFY_PATH.joinpath("web", "extensions", ADDON_NAME)
-    rmtree(aigodlike_ext_path)
+    if hasattr(nodes, "EXTENSION_WEB_DIRS"):
+        rmtree(aigodlike_ext_path)
+        return
+    # 新版已经不需要复制文件了
     try:
         if os.name == "nt":
-            import _winapi
-            _winapi.CreateJunction(CUR_PATH.as_posix(), aigodlike_ext_path.as_posix())
+            try:
+                import _winapi
+                _winapi.CreateJunction(CUR_PATH.as_posix(), aigodlike_ext_path.as_posix())
+            except WindowsError as e:
+                shutil.copytree(CUR_PATH.as_posix(), aigodlike_ext_path.as_posix(), ignore=shutil.ignore_patterns(".git"))
         else:
             # 复制时过滤 .git
             shutil.copytree(CUR_PATH.as_posix(), aigodlike_ext_path.as_posix(), ignore=shutil.ignore_patterns(".git"))
     except Exception as e:
         sys.stderr.write(f"[agl/register error]: {e}\n")
         sys.stderr.flush()
-    return
-    aigodlike_ext_path.mkdir(parents=True, exist_ok=True)
-    # 复制所有js文件
-    for data in CUR_PATH.glob("*.js"):
-        shutil.copy(data, aigodlike_ext_path)
-    # shutil.copy(CUR_PATH.joinpath("main.js"), aigodlike_ext_path)
-
-    # combine jsons into one
-    # translations_path = CUR_PATH.joinpath("translations.json")
-    # translations = {}
-    # for data in CUR_PATH.glob("*.json"):
-    #     if data.name == "translations.json":
-    #         continue
-    #     try:
-    #         json_data = json.loads(data.read_text(encoding="utf-8"))
-    #     except UnicodeDecodeError:
-    #         json_data = json.loads(data.read_text(encoding="gbk"))
-    #     translations.update(json_data)
-    # translations_path.write_text(json.dumps(translations, indent=4, ensure_ascii=False), encoding="utf-8")
-    # 文件复制 translations.json main.js
-    # shutil.copy(translations_path, aigodlike_ext_path)
 
 
 def unregister():
@@ -176,3 +184,4 @@ def unregister():
 register()
 atexit.register(unregister)
 NODE_CLASS_MAPPINGS = {}
+WEB_DIRECTORY = "./"
