@@ -115,10 +115,6 @@ export function applyMenuTranslation(T) {
     });
   });
 
-  const comfySettingDialog = document.querySelector("#comfy-settings-dialog");
-
-  observeFactory(comfySettingDialog.querySelector("tbody"), handleComfySettingDialogObserver);
-
   observeFactory(document.querySelector(".comfy-menu"), handleViewQueueComfyListObserver);
 
   observeFactory(document.querySelector(".comfy-menu").querySelectorAll(".comfy-list")[0], handleViewQueueComfyListObserver);
@@ -192,33 +188,6 @@ export function applyMenuTranslation(T) {
         for (const node of mutation.addedNodes) {
           texe.replaceText(node);
         }
-      }
-    }
-  }
-
-  const translateSettingDialog = () => {
-    const comfySettingDialogAllElements = comfySettingDialog.querySelectorAll("*");
-
-    for (const ele of comfySettingDialogAllElements) {
-      let targetLangText = texe.MT(ele.innerText);
-      let titleText = texe.MT(ele.title);
-      if(titleText) ele.title = titleText;
-      if (!targetLangText) {
-        if (ele.nodeName === "INPUT" && ele.type === "button") {
-          targetLangText = texe.MT(ele.value);
-          if (!targetLangText) continue;
-          ele.value = targetLangText;
-        }
-        continue;
-      }
-      texe.replaceText(ele);
-    }
-  };
-
-  function handleComfySettingDialogObserver(mutationsList) {
-    for (let mutation of mutationsList) {
-      if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
-        translateSettingDialog();
       }
     }
   }
